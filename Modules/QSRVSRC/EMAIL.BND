@@ -1,0 +1,30 @@
+000100061012    /* ********************************************************************** */
+000200090120    /* Program . . . . . EMAIL                                                */
+000300061012    /*                                                                        */
+000400090120    /* Created on  . . . 01/20/2009                                           */
+000500061012    /*         by  . . . Michael N. Wills                                     */
+000600061012    /*                                                                        */
+000700061012    /* Description . . .                                                      */
+000800061012    /*                                                                        */
+000900061012    /* CHANGE LOG:                                                            */
+001000061012    /* Date       | Name            | Description                             */
+001100061012    /* ---------------------------------------------------------------------- */
+001200061012    /*            |                 |                                         */
+001300061012    /*            |                 |                                         */
+001400061012    /*            |                 |                                         */
+001500061012    /* ************************************************************************/
+001600110428             STRPGMEXP  PGMLVL(*CURRENT) LVLCHK(*YES) SIGNATURE('1.20')
+001700120214                EXPORT     SYMBOL(SendMail)
+001800110428                EXPORT     SYMBOL(ParseEmailAddresses)
+001900120214                EXPORT     SYMBOL(IsValidEmailAddress)
+002000120214                EXPORT     SYMBOL(SendMailAttachment)
+002100110428             ENDPGMEXP
+002200110428
+002300110428             STRPGMEXP  PGMLVL(*PRV) LVLCHK(*YES) SIGNATURE('1.10')
+002400110428                EXPORT     SYMBOL(SndMail)
+002500110428                EXPORT     SYMBOL(ParseEmailAddresses)
+002600090928             ENDPGMEXP
+002700090928
+002800090928             STRPGMEXP  PGMLVL(*PRV) LVLCHK(*YES) SIGNATURE('1.00')
+002900110428                EXPORT     SYMBOL(SendMail)
+003000061012             ENDPGMEXP

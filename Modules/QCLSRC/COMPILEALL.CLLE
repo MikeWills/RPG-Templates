@@ -1,0 +1,65 @@
+000100110512    /* ********************************************************************** */
+000200110512    /* Compiler Options:                                                      */
+000300110512    /*   COMPILE OPTIONS HERE                                                 */
+000400110512    /*                                                                        */
+000500110512    /* Program . . . . . COMPILE                                              */
+000600110512    /*                                                                        */
+000700110512    /* Created on  . . . 05/12/2011                                           */
+000800110512    /*         by  . . . Michael N. Wills                                     */
+000900110512    /*                                                                        */
+001000110512    /* Description . . .                                                      */
+001100110512    /*                                                                        */
+001200110512    /* To Compile:                                                            */
+001300110512    /* *> CRTBNDCL PGM(&O/&ON) SRCFILE(&L/&F)                             <*  */
+001400110516    /* *> DLTSPLF FILE(&ON) SPLNBR(*LAST)                                 <*  */
+001500110512    /*                                                                        */
+001600110512    /* CHANGE LOG:                                                            */
+001700110512    /* Date       | Name            | Description                             */
+001800110512    /* ---------------------------------------------------------------------- */
+001900110512    /*            |                 |                                         */
+002000110512    /*            |                 |                                         */
+002100110512    /*            |                 |                                         */
+002200110512    /* ************************************************************************/
+002300110512             PGM
+002400110512             DCL        &FAILED TYPE(*DEC) LEN(10 0) VALUE(0)
+002500110512             DCL        &FAILEDSTR TYPE(*CHAR) LEN(10)
+002600110512
+002700110512             MODULES/BUILD OBJ(MODULES/RUNPCCMD)
+002800110512             MONMSG     MSGID(CPF0000) EXEC(DO)
+002900110512                CHGVAR     VAR(&FAILED) VALUE(&FAILED + 1)
+003000110512             ENDDO
+003100110512
+003200110512             MODULES/BUILD OBJ(MODULES/ADVERRORFM)
+003300110512             MONMSG     MSGID(CPF0000) EXEC(DO)
+003400110512                CHGVAR     VAR(&FAILED) VALUE(&FAILED + 1)
+003500110512             ENDDO
+003600110512
+003700110512             MODULES/BUILD OBJ(MODULES/EMAIL)
+003800110512             MONMSG     MSGID(CPF0000) EXEC(DO)
+003900110512                CHGVAR     VAR(&FAILED) VALUE(&FAILED + 1)
+004000110512             ENDDO
+004100110512
+004200110512             MODULES/BUILD OBJ(MODULES/F.CA)
+004300110512             MONMSG     MSGID(CPF0000) EXEC(DO)
+004400110512                CHGVAR     VAR(&FAILED) VALUE(&FAILED + 1)
+004500110512             ENDDO
+004600110512
+004700110512             MODULES/BUILD OBJ(MODULES/F.CMD)
+004800110512             MONMSG     MSGID(CPF0000) EXEC(DO)
+004900110512                CHGVAR     VAR(&FAILED) VALUE(&FAILED + 1)
+005000110512             ENDDO
+005100110512
+005200110512             MODULES/BUILD OBJ(MODULES/F.DATE)
+005300110512             MONMSG     MSGID(CPF0000) EXEC(DO)
+005400110512                CHGVAR     VAR(&FAILED) VALUE(&FAILED + 1)
+005500110512             ENDDO
+005600110512
+005700110512             MODULES/BUILD OBJ(MODULES/F.STRING)
+005800110512             MONMSG     MSGID(CPF0000) EXEC(DO)
+005900110512                CHGVAR     VAR(&FAILED) VALUE(&FAILED + 1)
+006000110512             ENDDO
+006100110512
+006200110512             CHGVAR     VAR(&FAILEDSTR) VALUE(&FAILED)
+006300110512             ADDENVVAR  ENVVAR(QRB_NUMBER_FAILED) VALUE(&FAILEDSTR) +
+006400110512                          REPLACE(*YES)
+006500110512             ENDPGM

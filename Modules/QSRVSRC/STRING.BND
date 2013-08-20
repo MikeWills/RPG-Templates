@@ -1,0 +1,52 @@
+000100060627    /* ********************************************************************** */
+000200080125    /* Program . . . . . F.STRING                                             */
+000300060627    /*                                                                        */
+000400060627    /* Created on  . . .                                                      */
+000500080125    /*         by  . . . Michael N. Wills                                     */
+000600060627    /*                                                                        */
+000700060627    /* Description . . .                                                      */
+000800060627    /*                                                                        */
+000900060627    /* CHANGE LOG:                                                            */
+001000060627    /* Date       | Name            | Description                             */
+001100060627    /* ---------------------------------------------------------------------- */
+001200080125    /* 12/25/2007 | Mike            | Added case conversion routines          */
+001300080125    /* 01/25/2008 | Mike            | Added word wrap routine                 */
+001400080125    /*            |                 |                                         */
+001500080125    /*            |                 |                                         */
+001600060627    /*            |                 |                                         */
+001700060627    /* ************************************************************************/
+001800100805             STRPGMEXP  PGMLVL(*CURRENT) LVLCHK(*YES) SIGNATURE('1.40')
+001900100805             EXPORT     SYMBOL(CenterText)
+002000100805             EXPORT     SYMBOL(ConvertToUpperCase)
+002100100805             EXPORT     SYMBOL(ConvertToLowerCase)
+002200100805             EXPORT     SYMBOL(WordWrap)
+002300100805             EXPORT     SYMBOL(SanitizeString)
+002400100805             EXPORT     SYMBOL(FindReplace)
+002500100805             EXPORT     SYMBOL(RtrimZeros)
+002600110512             EXPORT     SYMBOL(RightAlign)
+002700100805             ENDPGMEXP
+002800100805
+002900100805             STRPGMEXP  PGMLVL(*PRV) LVLCHK(*YES) SIGNATURE('1.30')
+003000090611             EXPORT     SYMBOL(CenterText)
+003100090611             EXPORT     SYMBOL(ConvertToUpperCase)
+003200090611             EXPORT     SYMBOL(ConvertToLowerCase)
+003300090611             EXPORT     SYMBOL(WordWrap)
+003400090611             EXPORT     SYMBOL(SanitizeString)
+003500090611             ENDPGMEXP
+003600090611
+003700090611             STRPGMEXP  PGMLVL(*PRV) LVLCHK(*YES) SIGNATURE('1.20')
+003800080125             EXPORT     SYMBOL(CenterText)
+003900080125             EXPORT     SYMBOL(ConvertToUpperCase)
+004000080125             EXPORT     SYMBOL(ConvertToLowerCase)
+004100080125             EXPORT     SYMBOL(WordWrap)
+004200080125             ENDPGMEXP
+004300080125
+004400080125             STRPGMEXP  PGMLVL(*PRV) LVLCHK(*YES) SIGNATURE('1.10')
+004500080111             EXPORT     SYMBOL(CenterText)
+004600080111             EXPORT     SYMBOL(ConvertToUpperCase)
+004700080111             EXPORT     SYMBOL(ConvertToLowerCase)
+004800080111             ENDPGMEXP
+004900080111
+005000080111             STRPGMEXP  PGMLVL(*PRV) LVLCHK(*YES) SIGNATURE('1.00')
+005100060627             EXPORT     SYMBOL(CenterText)
+005200060627             ENDPGMEXP

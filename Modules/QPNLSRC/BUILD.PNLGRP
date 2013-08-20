@@ -1,0 +1,293 @@
+000100110512:pnlgrp.
+000101110512.************************************************************************
+000102110512.*  Help for command BUILD
+000103110512.************************************************************************
+000104110512:help name='BUILD'.
+000105110512Build an object from source - Help
+000106110512:p.The Build an object from source (BUILD) command scans your source
+000107110512code for the commands needed to create a program or service program.
+000108110512.*
+000109110512:p.The BUILD command scans for the :hp2.*>:ehp2. character sequence.
+000110110512When this is found, it's considered to be the start of a command
+000111110512that you want to run to create your program. Everything after the
+000112110512after the :hp2.*>:ehp2. characters is considered part of the command
+000113110512command, up until the end of the line is reached, or a :hp2.<*:ehp2.
+000114110512character sequence is reached. The :hp2.<*:ehp2. sequence designates
+000115110512the end of a command string.
+000116110512.*
+000117110512:p.After executing your command, the BUILD tool will then search
+000118110512for the next line that contains a :hp2.*>:ehp2. sequence, and will
+000119110512run that line as a separate command.
+000120110512.*
+000121110512:p.You can add the - character as the last character of a command.
+000122110512When BUILD finds a command that ends with the - character (meaning
+000123110512that - is the last non-blank character before <* or the end of a
+000124110512record) it will proceed to read the next command string, and add it
+000125110512to the end of the current one.  This can be done multiple times
+000126110512to build a command that's up to 32702 characters long.
+000127110512.*
+000128110512:p.The BUILD command can also insert variables into your command
+000129110512text. If the following values are found, they are replaced with
+000130110512the corresponding value calculated by the BUILD program:
+000131110512:dl.
+000132110512:dt.&O
+000133110512:dd.Object Library
+000134110512:dt.&ON
+000135110512:dd.Object name
+000136110512:dt.&F
+000137110512:dd.Source file name
+000138110512:dt.&L
+000139110512:dd.Source file library
+000140110512:dt.&N
+000141110512:dd.Member name
+000142110512:dt.&DV
+000143110512:dd.Debug view value specified when BUILD was run.
+000144110512:dt.&OV
+000145110512:dd.OPM debug view (*LSTDBG or *SRCDBG)
+000146110512:dt.&EV
+000147110512:dd.The *EVENTF or *NOEVENTF specified when BUILD was run.
+000148110512:dt.&R
+000149110512:dd.REPLACE option specified when BUILD was run.
+000150110512:dt.&X
+000151110512:dd.Source member text (with single quotes added)
+000152110512:dt.&YY
+000153110512:dd.Current year, 2-digit
+000154110512:dt.&YYYY
+000155110512:dd.Current year, 4-digit
+000156110512:edl.
+000157110512.*
+000158110512:p.Normally, if a command designated in your source code fails,
+000159110512the BUILD utility will stop processing and return an error.
+000160110512However, if a command is prefixed with :hp2.ign::ehp2. then
+000161110512failure will be ignored, and BUILD will proceed to the next command.
+000162110512.*
+000163110512:p.:hp2.Restrictions::ehp2.
+000164110512:ul.
+000165110512:li.
+000166110512The BUILD command runs the commands that were desginated in the
+000167110512source code. You must have proper authority to run any of the
+000168110512commands that you list.
+000169110512:li.
+000170110512This command has not been tested in a multi-threaded environment,
+000171110512but should work properly, provided that it is not invoked twice
+000172110512concurrently.
+000173110512:eul.
+000174110512:ehelp.
+000175110512.*******************************************
+000176110512.*   Help for parameter OBJ
+000177110512.*******************************************
+000178110512:help name='BUILD/OBJ'.
+000179110512Object Name (OBJ) - Help
+000180110512:xh3.Object Name (OBJ)
+000181110512:p.Specifies the name of the object to build. The value you
+000182110512specify will be used to supply the value for the &O (object library)
+000183110512and &ON (object name) variables in the commands you execute.
+000184110512.*
+000185110512:p.This is a required parameter.
+000186110512:p.:hp2.Qualifier 1: Object Name:ehp2.
+000187110512:parml.
+000188110512:pt.:pv.name:epv.
+000189110512:pd.
+000190110512Specify the name of name of the object that you (ostensibly) will
+000191110512be building.
+000192110512:eparml.
+000193110512:p.:hp2.Qualifier 2: Object Library:ehp2.
+000194110512:parml.
+000195110512:pt.:pk def.*CURLIB:epk.
+000196110512:pd.
+000197110512Specify the current library (or QGPL if you have no current library)
+000198110512as the location to build objects in.
+000199110512.*
+000200110512:pt.:pv.name:epv.
+000201110512:pd.
+000202110512Specify the name of name of the library in which to build objects.
+000203110512.*
+000204110512:eparml.
+000205110512:ehelp.
+000206110512.*******************************************
+000207110512.*   Help for parameter SRCFILE
+000208110512.*******************************************
+000209110512:help name='BUILD/SRCFILE'.
+000210110512Source File (SRCFILE) - Help
+000211110512:xh3.Source File (SRCFILE)
+000212110512:p.Specifies the source file containing the commands to execute.
+000213110512.* Describe the function provided by the parameter.
+000214110512:p.:hp2.Qualifier 1: Source File:ehp2.
+000215110512:parml.:pt.:pk def.QRPGLESRC:epk.
+000216110512:pd.
+000217110512Look for commands in the QRPGLESRC file (the default source file
+000218110512for ILE RPG source code.)
+000219110512.* Describe the function provided by the default parameter value.
+000220110512:pt.:pv.name:epv.
+000221110512:pd.
+000222110512Specify the name of a source physical file that contains your
+000223110512source code with the *> and <* strings.
+000224110512.*
+000225110512:eparml.
+000226110512:p.:hp2.Qualifier 2: Library:ehp2.
+000227110512:parml.
+000228110512:pt.:pk def.*LIBL:epk.
+000229110512:pd.
+000230110512Search the library list for the source file that contains the proper
+000231110512member.
+000232110512.*
+000233110512:pt.:pk.*CURLIB:epk.
+000234110512:pd.
+000235110512Expect the source file containing the member to be in your current
+000236110512library.
+000237110512.*
+000238110512:pt.:pv.name:epv.
+000239110512:pd.
+000240110512Specify the name of the library that contains your source file.
+000241110512.*
+000242110512:eparml.
+000243110512:ehelp.
+000244110512.*******************************************
+000245110512.*   Help for parameter SRCMBR
+000246110512.*******************************************
+000247110512:help name='BUILD/SRCMBR'.
+000248110512Source member (SRCMBR) - Help
+000249110512:xh3.Source member (SRCMBR)
+000250110512:p.Specifies the source member containing the *> and <* strings.
+000251110512.*
+000252110512:parml.
+000253110512:pt.:pk def.*OBJ:epk.
+000254110512:pd.
+000255110512Use the same name as the OBJ() parameter, above.
+000256110512.*
+000257110512:pt.:pv.name:epv.
+000258110512:pd.
+000259110512Specify the name of the source member to use.
+000260110512.*
+000261110512:eparml.
+000262110512:ehelp.
+000263110512.*******************************************
+000264110512.*   Help for parameter DBGVIEW
+000265110512.*******************************************
+000266110512:help name='BUILD/DBGVIEW'.
+000267110512Debug View (DBGVIEW) - Help
+000268110512:xh3.Debug View (DBGVIEW)
+000269110512:p.Specifies the debugging view that will be used to calculate the
+000270110512&DV and &OV variables in your build script.
+000271110512.*
+000272110512:parml.
+000273110512:pt.:pk def.*LIST:epk.
+000274110512:pd.
+000275110512The &DV variable will be set to *LIST for ILE modules and programs,
+000276110512or *SOURCE for embedded SQL precompiler.  The &OV variable will be
+000277110512set to *LSTDBG for OPM programs.
+000278110512.*
+000279110512:pt.:pk.*SOURCE:epk.
+000280110512:pd.
+000281110512The &DV variable will be set to *SOURCE for ILE modules and progams,
+000282110512as well as the embedded SQL precompiler.  The &OV variable will be
+000283110512set to *SRCDBG for OPM programs.
+000284110512.*
+000285110512:pt.:pk.*STMT:epk.
+000286110512:pd.
+000287110512The &DV variable will be set to *STMT for ILE programs.  The &OV
+000288110512variable will be set to *NOSRCDBG.
+000289110512.*
+000290110512:pt.:pk.*NONE:epk.
+000291110512:pd.
+000292110512The &DV variable will be set to *NONE, and &OV will be set to *NOSRCDBG
+000293110512.*
+000294110512:eparml.
+000295110512:ehelp.
+000296110512.*******************************************
+000297110512.*   Help for parameter REPLACE
+000298110512.*******************************************
+000299110512:help name='BUILD/REPLACE'.
+000300110512Replace object (REPLACE) - Help
+000301110512:xh3.Replace object (REPLACE)
+000302110512:p.Specifies whether an existing object should be sent to QRPLOBJ
+000303110512and replaced (or not.)  The value given is available to the commands
+000304110512you run using the &R variable.
+000305110512.*
+000306110512:parml.
+000307110512:pt.:pk def.*YES:epk.
+000308110512:pd.
+000309110512An existing program (or whatever) should be replaced.
+000310110512.*
+000311110512:pt.:pk.*NO:epk.
+000312110512:pd.
+000313110512Existing programs should not be replaced.  The BUILD command
+000314110512does not have any way to enforce this, however -- it assumes
+000315110512you will make use of &R in your build script.
+000316110512.*
+000317110512:eparml.
+000318110512:ehelp.
+000319110512.*******************************************
+000320110512.*   Help for parameter ALWF9
+000321110512.*******************************************
+000322110512:help name='BUILD/ALWF9'.
+000323110512Allow F9=Retrieve on commands (ALWF9) - Help
+000324110512:xh3.Allow F9=Retrieve on commands (ALWF9)
+000325110512:p.Specifies whether F9=Retrieve can be used to retrieve the commands
+000326110512that were included in the source member.  For example, if you had
+000327110512coded the CRTBNDRPG command in your *> <* tags in the source code,
+000328110512should F9=Retrieve display the CRTBNDRPG command?  Or should it
+000329110512display the BUILD command?
+000330110512.*
+000331110512:parml.
+000332110512:pt.:pk.*YES:epk.
+000333110512:pd.
+000334110512Pressing F9 will retrieve the commands that were executed by BUILD
+000335110512.*
+000336110512:pt.:pk def.*NO:epk.
+000337110512:pd.
+000338110512Pressing F9 will retrieve the BUILD command itself, but not any of
+000339110512the commands that BUILD ran for you.
+000340110512.*
+000341110512:eparml.
+000342110512:ehelp.
+000343110512.*******************************************
+000344110512.*   Help for parameter OPTION
+000345110512.*******************************************
+000346110512:help name='BUILD/OPTION'.
+000347110512Compiler Options (OPTION) - Help
+000348110512:xh3.Compiler Options (OPTION)
+000349110512:p.Specifies special options sometimes required by the Rational tools
+000350110512for editing your source.
+000351110512:parml.
+000352110512:pt.:pk.*NOEVENTF:epk.
+000353110512:pd.
+000354110512The &EV variable will contain *NOEVENTF.
+000355110512.*
+000356110512:pt.:pk.*EVENTF:epk.
+000357110512:pd.
+000358110512The &EV variable will contain *EVENTF.
+000359110512.* Describe the function provided by the pre-defined parameter value.
+000360110512:eparml.
+000361110512:ehelp.
+000362110512.**************************************************
+000363110512.*
+000364110512.* Examples for BUILD
+000365110512.*
+000366110512.**************************************************
+000367110512:help name='BUILD/COMMAND/EXAMPLES'.
+000368110512Examples for BUILD - Help
+000369110512:xh3.Examples for BUILD
+000370110512:p.:hp2.Example 1: Simple Command Example:ehp2.
+000371110512:xmp.
+000372110512BUILD OBJ(FOO)
+000373110512:exmp.
+000374110512:p.This command builds an object named FOO.  To determine
+000375110512how to do that, it looks for a source member named FOO in a
+000376110512QRPGLESRC source file in your library list.
+000377110512.*
+000378110512:ehelp.
+000379110512.**************************************************
+000380110512.*
+000381110512.* Error messages for BUILD
+000382110512.*
+000383110512.**************************************************
+000384110512:help name='BUILD/ERROR/MESSAGES'.
+000385110512&msg(CPX0005,QCPFMSG). BUILD - Help
+000386110512:xh3.&msg(CPX0005,QCPFMSG). BUILD
+000387110512:p.Refer to the list of errors for the command(s) in your build
+000388110512comments for a list of the errors that can be returned by this
+000389110512utility.
+000390110512:ehelp.
+000391110512:epnlgrp.
+000392110512
