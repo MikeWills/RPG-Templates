@@ -7,7 +7,7 @@
     /* Created on  . . .                                                      */
     /*         by  . . .                                                      */
     /*                                                                        */
-    /* Description . . .                                                      */
+    /* Description . . . CL Program Template                                  */
     /*                                                                        */
     /* To Compile:                                                            */
     /* *> CRTBNDCL PGM(&O/&ON) SRCFILE(&L/&F) SRCMBR(&N) -                <*  */

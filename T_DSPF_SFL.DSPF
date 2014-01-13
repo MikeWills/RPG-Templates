@@ -7,7 +7,7 @@
      A* Created on  . . .
      A*         by  . . .
      A*
-     A* Description . . .
+     A* Description . . . Subfile Display File Template
      A*
      A* To Compile:
      A* *> CRTDSPF FILE(&O/&ON) SRCFILE(&L/&F) SRCMBR(&N)

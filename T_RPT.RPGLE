@@ -5,7 +5,7 @@
        // Created on  . . .
        //         by  . . .
        //
-       // Description . . .
+       // Description . . . Non-SQL Report Template
        //
        // To Compile:
        // *> CRTBNDRPG PGM(&O/&ON) SRCFILE(&L/&F) SRCMBR(&N) DBGVIEW(*SOURCE)

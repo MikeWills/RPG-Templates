@@ -5,7 +5,7 @@
        // Created on  . . .
        //         by  . . .
        //
-       // Description . . .
+       // Description . . . Template for File I/O Module
        //
        // To Compile:
        // *> CRTRPGMOD MODULE(&O/&ON) SRCFILE(&L/&F) SRCMBR(&N)

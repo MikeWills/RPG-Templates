@@ -5,7 +5,7 @@
        // Created on  . . .
        //         by  . . .
        //
-       // Description . . .
+       // Description . . . Non-SQL Subfile Screen Template
        //
        // To Compile:
        // *> CRTBNDRPG PGM(&O/&ON) SRCFILE(&L/&F) SRCMBR(&N) DBGVIEW(*SOURCE)

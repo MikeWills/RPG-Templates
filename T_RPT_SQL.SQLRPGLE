@@ -5,7 +5,7 @@
        // Created on  . . . 09/17/2008
        //         by  . . . Michael N. Wills
        //
-       // Description . . .
+       // Description . . . SQL Report Template
        //
        // To Compile:
        // *> CRTSQLRPGI OBJ(&O/&ON) SRCFILE(&L/&F) SRCMBR(&N) DBGVIEW(*SOURCE)

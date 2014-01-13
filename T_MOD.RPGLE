@@ -5,7 +5,7 @@
        // Created on  . . .
        //         by  . . .
        //
-       // Description . . .
+       // Description . . . Module Template
        //
        // To Compile:
        // *> CRTRPGMOD MODULE(&O/&ON) SRCFILE(&L/&F) SRCMBR(&N)

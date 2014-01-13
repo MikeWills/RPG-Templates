@@ -8,7 +8,7 @@
     /* Created on  . . .                                                      */
     /*         by  . . .                                                      */
     /*                                                                        */
-    /* Description . . .                                                      */
+    /* Description . . . Command Template                                     */
     /*                                                                        */
     /* To Compile:                                                            */
     /* *> CRTCMD CMD(&O/&ON) SRCFILE(&L/&F) SRCMBR(&N) PGM(LIB/PGM)       <*  */

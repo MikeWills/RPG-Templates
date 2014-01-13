@@ -7,7 +7,7 @@
      A* Created on  . . .
      A*         by  . . .
      A*
-     A* Description . . .
+     A* Description . . . Physical File Template
      A*
      A* To Compile:
      A* *> CHGPF FILE(&O/&ON) SRCFILE(&L/&F) SRCMBR(&N)
