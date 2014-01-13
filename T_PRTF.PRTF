@@ -11,6 +11,7 @@
      A*
      A* To Compile:
      A* *> CRTPRTF FILE(&O/&ON) SRCFILE(&L/&F) SRCMBR(&N) PAGESIZE(66 80)
+     A* *> DLTSPLF FILE(&N) SPLNBR(*LAST)
      A*
      A* CHANGE LOG:
      A* Date       | Name            | Description

@@ -12,6 +12,7 @@
     /*                                                                        */
     /* To Compile:                                                            */
     /* *> CRTCMD CMD(&O/&ON) SRCFILE(&L/&F) SRCMBR(&N) PGM(LIB/PGM)       <*  */
+    /* *> DLTSPLF FILE(&N) SPLNBR(*LAST)                                  <*  */
     /*                                                                        */
     /* CHANGE LOG:                                                            */
     /* Date       | Name            | Description                             */

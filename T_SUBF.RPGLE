@@ -9,6 +9,7 @@
        //
        // To Compile:
        // *> CRTBNDRPG PGM(&O/&ON) SRCFILE(&L/&F) SRCMBR(&N) DBGVIEW(*SOURCE)
+       // *> DLTSPLF FILE(&N) SPLNBR(*LAST)
        //
        // CHANGE LOG:
        // Date       | Name            | Description

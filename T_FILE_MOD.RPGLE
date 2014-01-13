@@ -10,6 +10,7 @@
        // To Compile:
        // *> CRTRPGMOD MODULE(&O/&ON) SRCFILE(&L/&F) SRCMBR(&N)
        // *> CRTSRVPGM SRVPGM(&O/&ON) OPTION(*DUPPROC)
+       // *> DLTSPLF FILE(&N) SPLNBR(*LAST)
        //
        // CHANGE LOG:
        // Date       | Name            | Description

@@ -11,6 +11,7 @@
      A*
      A* To Compile:
      A* *> CRTDSPF FILE(&O/&ON) SRCFILE(&L/&F) SRCMBR(&N)
+     A* *> DLTSPLF FILE(&N) SPLNBR(*LAST)
      A*
      A* CHANGE LOG:
      A* Date       | Name            | Description
