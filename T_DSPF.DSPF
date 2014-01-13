@@ -1,0 +1,43 @@
+     A**************************************************************************
+     A* * Compiler Options:
+     A*   COMPILE OPTIONS HERE
+     A*
+     A* File  . . . . . . T_DSPF
+     A*
+     A* Created on  . . .
+     A*         by  . . .
+     A*
+     A* Description . . .
+     A*
+     A* To Compile:
+     A* *> CRTDSPF FILE(&O/&ON) SRCFILE(&L/&F) SRCMBR(&N)
+     A*
+     A* CHANGE LOG:
+     A* Date       | Name            | Description
+     A* ------------------------------------------------------------------------
+     A*            |                 |
+     A*            |                 |
+     A*            |                 |
+     A**************************************************************************
+     A                                      DSPSIZ(24 80 *DS3)
+     A                                      CA03(03 'Exit')
+     A                                      CA12(12 'Cancel')
+     A                                      PRINT
+     A          R SCRN01
+     A                                      RTNCSRLOC(*RECNAME &HCSRREC +
+     A                                      &HCSRFLD)
+     A            PGM           10   O  1  2
+     A                                  1 72DATE
+     A                                      EDTCDE(Y)
+     A                                  2 72TIME
+     A            ERRORMSG      78   O 22  2COLOR(RED)
+     A                                 23  2'F3=Exit'
+     A                                      COLOR(BLU)
+     A                                 23 11'F4=Prompt'
+     A                                      COLOR(BLU)
+     A                                 23 22'F6=Add'
+     A                                      COLOR(BLU)
+     A                                 23 30'F12=Cancel'
+     A                                      COLOR(BLU)
+     A            HCSRFLD       10A  H
+     A            HCSRREC       10A  H 

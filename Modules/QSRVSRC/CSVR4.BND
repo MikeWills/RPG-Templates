@@ -1,8 +1,0 @@
-000100110629strpgmexp signature('CSVR4 v1.01     ')
-000102110629   export symbol(csv_open)
-000104110629   export symbol(csv_loadrec)
-000106110629   export symbol(csv_rewindfile)
-000108110629   export symbol(csv_getfld)
-000110110629   export symbol(csv_rewindrec)
-000112110629   export symbol(csv_close)
-000114110629endpgmexp

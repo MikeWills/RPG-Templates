@@ -1,0 +1,27 @@
+     H nomain option(*srcstmt:*nodebugio)
+       //*************************************************************************
+       // Program . . . . . T_MOD
+       //
+       // Created on  . . .
+       //         by  . . .
+       //
+       // Description . . .
+       //
+       // To Compile:
+       // *> CRTRPGMOD MODULE(&O/&ON) SRCFILE(&L/&F) SRCMBR(&N)
+       // *> CRTSRVPGM SRVPGM(&O/&ON) OPTION(*DUPPROC)
+       //
+       // CHANGE LOG:
+       // Date       | Name            | Description
+       // -----------------------------------------------------------------------
+       //            |                 |
+       //            |                 |
+       //            |                 |
+       //*************************************************************************
+
+       // Prototypes
+      /copy QSRVSRC,T_MOD_H
+
+       // **********************************************************************
+       // Global Definitions
+ 

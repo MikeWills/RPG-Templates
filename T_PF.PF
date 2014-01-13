@@ -1,0 +1,31 @@
+     A**************************************************************************
+     A* * Compiler Options:
+     A*   COMPILE OPTIONS HERE
+     A*
+     A* File  . . . . . . T_PF
+     A*
+     A* Created on  . . .
+     A*         by  . . .
+     A*
+     A* Description . . .
+     A*
+     A* To Compile:
+     A* *> CHGPF FILE(&O/&ON) SRCFILE(&L/&F) SRCMBR(&N)
+     A*
+     A* CHANGE LOG:
+     A* Date       | Name            | Description
+     A* ------------------------------------------------------------------------
+     A*            |                 |
+     A*            |                 |
+     A*            |                 |
+     A**************************************************************************
+     A                                      UNIQUE
+     A          R T_PFR
+      * Primary Key
+     A            NPRIMRYKEY     6  0       ALIAS()
+     A                                      COLHDG('')
+     A                                      TEXT('')
+      * Regular Fields
+     A
+      * Set primary key
+     A          K NPRIMRYKEY 
