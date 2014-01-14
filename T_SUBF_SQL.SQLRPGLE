@@ -129,7 +129,7 @@
          exfmt CTL01;
          ResetIndicators();
 
-         // *** INSERT CODE HERE ***
+         // TODO: INSERT CODE HERE
 
        enddo;
 
@@ -173,7 +173,7 @@
        if (OpenCursor() = SQL_SUCCESS);
          dow (FetchNext() = SQL_SUCCESS) and (rrn01 < 9999);
 
-           // *** INSERT CODE HERE ***
+           // TODO: INSERT CODE HERE
 
            rrn01 += 1;
            write SFL01;
@@ -209,7 +209,7 @@
 
          dow (not %eof());
 
-           // *** INSERT CODE HERE ***
+           // TODO: INSERT CODE HERE
 
            sel = ' ';
            update SFL01;
@@ -238,7 +238,7 @@
 
       /free
 
-       // *** INSERT CODE HERE ***
+       // TODO: INSERT CODE HERE
 
        return;
 
@@ -256,7 +256,7 @@
 
       /free
 
-       // *** INSERT CODE HERE ***
+       // TODO: INSERT CODE HERE
 
        return;
 
@@ -274,7 +274,7 @@
 
       /free
 
-       // *** INSERT CODE HERE ***
+       // TODO: INSERT CODE HERE
 
        return;
 
@@ -292,7 +292,7 @@
 
       /free
 
-       // *** INSERT CODE HERE ***
+       // TODO: INSERT CODE HERE
 
        return;
 
@@ -311,7 +311,7 @@
 
       /free
 
-       // *** INSERT CODE HERE ***
+       // TODO: INSERT CODE HERE
 
        return;
 
@@ -329,7 +329,7 @@
 
       /free
 
-       // *** INSERT CODE HERE ***
+       // TODO: INSERT CODE HERE
 
        return;
 
@@ -351,7 +351,7 @@
 
        isValid = *on;
 
-       // *** INSERT CODE HERE ***
+       // TODO: INSERT CODE HERE
 
        return isValid;
 
@@ -369,7 +369,7 @@
 
       /free
 
-       // *** INSERT CODE HERE ***
+       // TODO: INSERT CODE HERE
 
        return;
 
@@ -387,7 +387,7 @@
 
       /free
 
-       // *** INSERT CODE HERE ***
+       // TODO: INSERT CODE HERE
 
        return;
 
@@ -407,7 +407,7 @@
 
       /free
 
-       // *** INSERT CODE HERE ***
+       // TODO: INSERT CODE HERE
 
        return;
 

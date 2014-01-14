@@ -108,7 +108,7 @@
        if (OpenCursor() = SQL_SUCCESS);
          dow (FetchNext() = SQL_SUCCESS);
 
-           // *** INSERT CODE HERE ***
+           // TODO: INSERT CODE HERE
 
          enddo;
        endif;
