@@ -1,0 +1,18 @@
+    /* ********************************************************************** */
+    /* Program . . . . . CMD                                                 */
+    /*                                                                        */
+    /* Created on  . . . 06/08/2006                                           */
+    /*         by  . . . Mike Wills (http://mikewills.me)                     */
+    /*                                                                        */
+    /* Description . . . Binding information for CMD.RPGLE                    */
+    /*                                                                        */
+    /* CHANGE LOG:                                                            */
+    /* Date       | Name            | Description                             */
+    /* ---------------------------------------------------------------------- */
+    /*            |                 |                                         */
+    /*            |                 |                                         */
+    /*            |                 |                                         */
+    /* ************************************************************************/
+             STRPGMEXP  PGMLVL(*CURRENT) LVLCHK(*YES) SIGNATURE('1.00')
+             EXPORT     SYMBOL(ExecClCmd)
+             ENDPGMEXP 
