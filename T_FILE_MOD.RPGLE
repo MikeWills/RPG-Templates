@@ -8,7 +8,8 @@
        // Description . . . Template for File I/O Module
        //
        // To Compile:
-       // *> CRTRPGMOD MODULE(&O/&ON) SRCFILE(&L/&F) SRCMBR(&N)
+       // *> CRTRPGMOD MODULE(&O/&ON) SRCFILE(&L/&F) SRCMBR(&N) -
+       // *>           DBGVIEW(*SOURCE) 
        // *> CRTSRVPGM SRVPGM(&O/&ON) OPTION(*DUPPROC)
        // *> DLTSPLF FILE(&N) SPLNBR(*LAST)
        //

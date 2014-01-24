@@ -8,7 +8,8 @@
        // Description . . . SQL Report Template
        //
        // To Compile:
-       // *> CRTSQLRPGI OBJ(&O/&ON) SRCFILE(&L/&F) SRCMBR(&N) DBGVIEW(*SOURCE)
+       // *> CRTSQLRPGI OBJ(&O/&ON) SRCFILE(&L/&F) SRCMBR(&N) -
+       // *>            DBGVIEW(*SOURCE) 
        // *> DLTSPLF FILE(&N) SPLNBR(*LAST)
        //
        // CHANGE LOG:

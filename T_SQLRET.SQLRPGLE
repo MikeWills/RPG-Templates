@@ -9,7 +9,7 @@
        //
        // To Compile:
        // *> CRTSQLRPGI OBJ(&O/&ON) SRCFILE(&L/QPGMSRC) SRCMBR(&N) -
-       // *>   DBGVIEW(*SOURCE)
+       // *>            DBGVIEW(*SOURCE)
        // *> DLTSPLF FILE(&N) SPLNBR(*LAST)
        //
        // CHANGE LOG:
